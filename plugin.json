@@ -1,0 +1,43 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "image-style-transfer",
+  "version": "1.0.0",
+  "description": "Restyle any image into one of 37 curated art styles. Ships a production-tested prompt library, per-style strength recommendations, and local-patch retouching recipes that fix one detail without re-rendering the whole image. Generator-agnostic: works with any image model your agent can reach.",
+  "author": {
+    "name": "can1123",
+    "url": "https://github.com/jyi06"
+  },
+  "homepage": "https://github.com/jyi06/image-style-transfer",
+  "repository": "https://github.com/jyi06/image-style-transfer",
+  "license": "MIT",
+  "keywords": [
+    "image",
+    "style-transfer",
+    "art",
+    "prompt-library",
+    "ai-art",
+    "agent-skills",
+    "codex",
+    "claude-code"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Image Style Transfer",
+        "shortDescription": "37 art styles for any image",
+        "longDescription": "Turn a photo into Chinese ink wash, oil painting, ukiyo-e, cyberpunk, anime, film noir, an editorial magazine spread and 30 more styles. Includes a battle-tested prompt library, a strength-tuning playbook mapped to any provider's parameter, and local-patch retouching recipes for repairing a single detail without drifting the rest of the image.",
+        "developerName": "can1123",
+        "category": "Creativity",
+        "capabilities": ["Read", "Write"],
+        "websiteURL": "https://github.com/jyi06/image-style-transfer",
+        "privacyPolicyURL": "https://github.com/jyi06/image-style-transfer",
+        "termsOfServiceURL": "https://github.com/jyi06/image-style-transfer",
+        "defaultPrompt": [
+          "Turn this photo into a Chinese ink wash painting.",
+          "Restyle this portrait in three different art styles."
+        ],
+        "brandColor": "#6C5CE7"
+      }
+    }
+  }
+}

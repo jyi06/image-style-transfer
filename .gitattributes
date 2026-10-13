@@ -1,0 +1,9 @@
+# Normalize line endings to LF — this repo is text-only (Markdown, Python, YAML, JSON).
+* text=auto eol=lf
+
+# Binary assets stay untouched
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary

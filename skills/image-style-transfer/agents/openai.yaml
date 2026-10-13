@@ -1,0 +1,15 @@
+interface:
+  display_name: "Image Style Transfer"
+  short_description: "Restyle any image into one of 37 art styles"
+  default_prompt: "Use image-style-transfer to restyle this image into the style I name."
+  brand_color: "#6C5CE7"
+
+policy:
+  allow_implicit_invocation: true
+
+dependencies:
+  tools:
+    - type: "bash"
+      value: "python3"
+      description: "Python 3.8+ — only needed for the optional scripts/generate.py helper and the retouching recipes"
+      transport: "stdio"

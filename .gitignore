@@ -1,0 +1,16 @@
+# generated outputs
+generated-images/
+output/
+out/
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# os / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
