@@ -1,10 +1,30 @@
 # Image Style Transfer
 
-> Turn any image into one of **37 curated art styles** — Chinese ink wash, oil painting, ukiyo-e, cyberpunk, Studio Ghibli, film noir, editorial magazine spreads and 30 more.
+> Turn any image into one of **50 curated art styles** — Chinese ink wash, oil painting, ukiyo-e, cyberpunk, Studio Ghibli, film noir, editorial magazine spreads, Art Deco, Risograph, stained glass and 40 more.
 
 [中文说明 →](README.zh-CN.md)
 
 Built on the open **Agent Skills** standard, so the same skill runs in **Codex, ChatGPT, Claude Code, Cursor, GitHub Copilot, Gemini CLI, VS Code** — any host that reads `SKILL.md`.
+
+---
+
+## Gallery
+
+One input image, seven of the 50 styles. Every result below came from a single prompt-template entry in the library — no per-image hand-tuning.
+
+![Original on the left, #26 JOJO on the right](docs/gallery/before-after.png)
+
+![Seven styles applied to the same input image: ink wash, JOJO, high-fashion editorial, black & white film, impressionist impasto, expressionist portrait, literary magazine layout](docs/gallery/showcase.png)
+
+| Tile | Style | What the prompt does |
+|------|-------|----------------------|
+| #7 | Chinese ink wash | `xieyi` brushwork, 墨分五色, large negative space; the cloak becomes a poured-ink wash |
+| #26 | JOJO | cel shading, flat colour blocks, thick `Araki line` hatching |
+| #3 | High-fashion editorial | hard key light, magazine-cover contrast, couture styling |
+| #18 | Black & white film | silver gelatin, deep blacks, no residual colour |
+| #31 | Impressionist impasto | broken colour, visible thick paint, edge dissolution |
+| #32 | Expressionist portrait | distorted form, raw brushwork, heightened colour |
+| #37 | Literary magazine | constructivist geometry, circular crop, restrained poetry layout |
 
 ---
 
@@ -19,7 +39,7 @@ Most style-transfer prompts are a one-line "make it look like an oil painting". 
 
 Beyond the library, the skill carries a **retouching playbook** for the part everyone gets stuck on: the render is 95% right, one detail is wrong, and re-running the whole image wrecks everything else. The fix — crop a patch, repaint the patch, feather it back so the rest stays pixel-identical — is documented with measured before/after numbers.
 
-## The 37 styles
+## The 50 styles
 
 | # | Category | Styles |
 |---|----------|--------|
@@ -30,8 +50,13 @@ Beyond the library, the skill carries a **retouching playbook** for the part eve
 | 22–26 | Anime & illustration | anime, Ghibli, comic book, storybook, JOJO (cel shading + Araki line) |
 | 27–32 | Materials & tones | paper cutout, Lego, neon glass, Morandi tones, impressionist impasto, expressionist impasto portrait |
 | 33–37 | Editorial design | impasto micro-landscape poster, gathered-scenes zine, watercolor journal, abstract memory panel, literary modernist magazine |
+| 38–43 | Print & ornamental art | Art Deco, Art Nouveau, Bauhaus poster, Risograph, woodcut, banknote engraving |
+| 44–48 | Art movements & concepts | pointillism, surrealism, Op Art, fresco, stained glass |
+| 49–50 | Material & craft | embroidery, marble sculpture |
 
 Full prompts and parameters: [`skills/image-style-transfer/references/style-library.md`](skills/image-style-transfer/references/style-library.md).
+
+> **Numbering policy: append, never insert.** Existing numbers are part of the public interface — people quote them back ("do 26 and 37"). New styles take the next free number at the end so every number ever published stays valid.
 
 ## Install
 
@@ -121,13 +146,16 @@ If you send an image with no style named, the skill shows a menu of the four bes
 image-style-transfer/
 ├── plugin.json                              # portable manifest (agent-plugins.org schema)
 ├── README.md / README.zh-CN.md
+├── CHANGELOG.md
 ├── LICENSE
+├── docs/
+│   └── gallery/                             # the before/after images shown above
 └── skills/
     └── image-style-transfer/
         ├── SKILL.md                         # the workflow
         ├── agents/openai.yaml               # Codex-side metadata and dependencies
         ├── references/
-        │   ├── style-library.md             # the 37 prompt templates
+        │   ├── style-library.md             # the 50 prompt templates
         │   └── style-menu.md                # the selection menu + smart recommendations
         └── scripts/
             └── generate.py                  # optional zero-dependency image-to-image helper

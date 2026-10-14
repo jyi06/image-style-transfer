@@ -1,6 +1,6 @@
 ---
 name: image-style-transfer
-description: Restyle any image into one of 37 curated art styles (Chinese ink wash, oil painting, watercolor, ukiyo-e, cyberpunk, anime, Ghibli, film noir, editorial magazine layouts, ...). Use when the user provides an image and asks to "make it X style", "turn this into oil painting", "style transfer", "photo to art", "换成XX风格", "做成XX风", or when they send an image with no style named (present the style menu first). Ships a production-tested prompt library, per-style strength recommendations, and local-patch retouching recipes for fixing one detail without re-rendering the whole image.
+description: Restyle any image into one of 50 curated art styles (Chinese ink wash, oil painting, watercolor, ukiyo-e, cyberpunk, anime, Ghibli, film noir, editorial magazine layouts, Art Deco, Risograph, pointillism, stained glass, ...). Use when the user provides an image and asks to "make it X style", "turn this into oil painting", "style transfer", "photo to art", "换成XX风格", "做成XX风", or when they send an image with no style named (present the style menu first). Ships a production-tested prompt library, per-style strength recommendations, and local-patch retouching recipes for fixing one detail without re-rendering the whole image.
 license: MIT
 compatibility: Any agent that supports the open Agent Skills standard (Codex, ChatGPT, Claude Code, Cursor, GitHub Copilot, Gemini CLI, VS Code...). Requires an image-generation / image-editing capability — either an image model exposed as an MCP tool, or the bundled scripts/generate.py helper pointed at an OpenAI-compatible image API.
 ---
@@ -20,7 +20,7 @@ All IP in here is the prompt library, the strength-tuning playbook and the retou
 
 ## Style library at a glance
 
-**37 styles, numbered 1–37** (authoritative source: `references/style-library.md`).
+**50 styles, numbered 1–50** (authoritative source: `references/style-library.md`).
 
 | Category | Numbers | Count |
 |------|------|------|
@@ -31,9 +31,13 @@ All IP in here is the prompt library, the strength-tuning playbook and the retou
 | Anime & illustration | 22–26 | 5 |
 | Materials, tones & expressionism | 27–32 | 6 |
 | Editorial design, zines & posters | 33–37 | 5 |
-| **Total** | **1–37** | **37** |
+| Print, graphic & ornamental art *(v4)* | 38–43 | 6 |
+| Art movements & concepts *(v4)* | 44–48 | 5 |
+| Material & craft *(v4)* | 49–50 | 2 |
+| **Total** | **1–50** | **50** |
 
 > The numbers must stay consistent across this file, `references/style-library.md` and `references/style-menu.md`. When adding a style, update all three.
+> **Append, never insert.** Numbers are the interface users quote back ("do 26 and 37"). Appending new entries as `51, 52, ...` keeps every previously published number valid; inserting in the middle silently renumbers everything after it.
 
 ## When to use
 

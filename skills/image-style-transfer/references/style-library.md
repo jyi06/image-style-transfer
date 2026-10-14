@@ -1,8 +1,15 @@
-# 风格提示词库（Style Prompt Library） — 共 37 个风格
+# 风格提示词库（Style Prompt Library） — 共 50 个风格
 
 本文件是 image-style-transfer 的核心资产。每个风格给出**可直接使用的提示词模板**、
 **推荐输入保真度（input_fidelity）** 与 **适用场景**。
 
+> **v4 更新（2026-10-14）**：新增 **13 个风格（编号 38–50）**，形成三个新分节——
+> **八、印刷·平面·装饰艺术（38–43）**、**九、艺术流派·观念（44–48）**、**十、材质与手作（49–50）**。
+> ⚠️ **1–37 的编号一个都没动**（新条目一律**追加在末尾**）：编号是用户与旧文档引用的事实接口，
+> 中途插入会让所有后续编号错位。**今后扩充也请照此办理 —— 只追加，不插入。**
+> 分类分布：文艺杂志 4 ｜ 绘画手作 6 ｜ 潮流数字 6 ｜ 复古胶片 5 ｜ 动漫插画 5 ｜
+> 特殊材质·色调·表现主义 6 ｜ 编辑设计·纸刊与海报 5 ｜ **印刷平面·装饰 6** ｜ **艺术流派·观念 5** ｜ **材质手作 2**。
+>
 > **v3 更新（2026-10-12）**：风格库重排为**连续编号 1–37**（此前 #26 JOJO 与 #32 表现主义厚涂
 > 因后续新增而编号错位，现按分类位置归位），并统一了编号 ↔ 分类 ↔ `style-menu.md` 菜单三处的对应关系。
 > 分类分布：文艺杂志 4 ｜ 绘画手作 6（含 JOJO）｜ 潮流数字 6 ｜ 复古胶片 5 ｜ 动漫插画 4 ｜
@@ -387,7 +394,148 @@
 
 ---
 
-## 八、风格推导公式（用于未收录的风格）
+## 八、印刷 · 平面 · 装饰艺术
+
+> v4 新增（38–43）。共同点：**用"印刷／雕刻的工艺语言"重做画面**，而不是换一种绘画笔触。
+> 这类风格的辨识度来自**工艺痕迹**（套印偏移、凿痕、排线），提示词里必须把这些痕迹写实。
+
+### 38. 装饰艺术（Art Deco）
+- **关键词**：Art Deco, gilded geometry, stepped form, symmetry, machine-age, polished metal, lacquer, Chrysler Building
+- **术语锚点**：**gilded geometry（镀金几何）**｜stepped form（阶梯式收分）｜axial symmetry（中轴对称）｜lacquer（漆面）｜sunburst（放射日纹）
+- **参照物**：克莱斯勒大厦／帝国大厦的装饰语汇；塔玛拉·德·兰碧卡（Tamara de Lempicka）的人物画
+- **提示词模板**：`装饰艺术（Art Deco）风格，镀金几何纹样（gilded geometry）与阶梯式收分造型，严格的中轴对称构图，黑、金与祖母绿配色，抛光金属与漆面的光泽，放射日纹（sunburst）与扇形装饰，机械时代的装饰语汇，平整的装饰性块面，整体像一张上世纪二十年代的装饰艺术海报；保持主体五官、姿态与构图不变`
+- **推荐 input_fidelity**：0.6
+- **适合**：人像、建筑、产品
+- **避免**：不要巴洛克式繁复曲线、不要柔和粉彩、不要卡通化、不要 3D 渲染感
+
+### 39. 新艺术运动（Art Nouveau）
+- **关键词**：Art Nouveau, whiplash curve, sinuous line, ornamental border, Alphonse Mucha, muted pastel, decorative panel
+- **术语锚点**：**whiplash curve（鞭形曲线）**｜sinuous line（蜿蜒线）｜ornamental border（装饰边框）｜decorative panel（装饰画板）
+- **参照物**：**阿尔丰斯·穆夏（Alphonse Mucha）**、奥布里·比亚兹莱；吉马尔设计的巴黎地铁入口
+- **提示词模板**：`新艺术运动（Art Nouveau）风格，穆夏式的装饰画板构图，蜿蜒的鞭形曲线（whiplash curve）与植物卷草纹样环绕主体，粗细分明的装饰性轮廓线，米黄、灰绿与暗金的柔和配色，平涂色块上加微妙的水彩渐变，画面上方或下方留出对称的装饰边框与留白区；保持主体五官与姿态可辨`
+- **推荐 input_fidelity**：0.6
+- **适合**：人像、花卉、海报
+- **避免**：不要硬朗几何、不要赛博霓虹、不要照片写实、不要现代扁平化
+
+### 40. 包豪斯海报（Bauhaus Poster）
+- **关键词**：Bauhaus, geometric abstraction, primary colour triad, grid system, photomontage, Moholy-Nagy, functionalism
+- **术语锚点**：**geometric abstraction（几何抽象）**｜primary colour triad（原色三色）｜grid system（网格系统）｜photomontage（摄影拼贴）
+- **参照物**：莫霍利-纳吉与赫伯特·拜耶的包豪斯刊物；德绍包豪斯时期的展览海报
+- **提示词模板**：`包豪斯（Bauhaus）平面海报风格，几何抽象与网格系统（grid system），红黄蓝原色与黑灰，粗壮的无衬线字体沿斜轴排布，主体以摄影局部拼贴（photomontage）的方式嵌入几何色块，正圆、矩形与 45° 对角线分割画面，纸张平印质感，理性、功能主义、现代主义；保持主体五官可辨`
+- **推荐 input_fidelity**：0.5
+- **适合**：人像、产品、建筑
+- **避免**：不要装饰性曲线、不要泛黄做旧、不要柔和渐变、不要廉价复古滤镜
+- **与 #37 的分工**：**#40 = 纯平面设计语言（原色几何 + 网格）**；**#37 = 文学杂志观念版式（构成主义 + 现代诗 + 一抹强调色）**。要"纯海报"选 40，要"有文字与观念"选 37
+
+### 41. 孔版印刷（Risograph）
+- **关键词**：risograph, spot ink, overprint, misregistration, fluorescent pink, duotone, textured paper, grainy ink
+- **术语锚点**：**spot ink（专色油墨）**｜overprint（叠印）｜misregistration（套印偏移）｜duotone（双色印刷）
+- **参照物**：Risograph 印刷的独立杂志、演出海报与小报
+- **提示词模板**：`孔版印刷（Risograph）风格，仅用两三种专色油墨（荧光粉、亮蓝、黑）依次套印叠加，可见明显的套印偏移与错位，油墨颗粒粗粝、实地有细微斑驳与不均匀，纸张纤维与轻微透印，高对比平涂、几乎没有渐变，像一张独立出版社的 Risograph 演出海报；保持主体五官与构图不变`
+- **推荐 input_fidelity**：0.5
+- **适合**：人像、图形、海报
+- **避免**：不要四色全彩、不要光滑渐变、不要 3D 质感、不要精确对齐（错位正是特征）
+
+### 42. 木刻版画（Woodcut）
+- **关键词**：woodcut, relief print, gouge marks, carved line, black and white, hatching, limited ink
+- **术语锚点**：**relief print（凸版）**｜gouge mark（凿痕）｜carved line（刻线）｜linocut（麻胶版）
+- **参照物**：凯绥·柯勒惠支的木刻；德国表现主义版画
+- **提示词模板**：`木刻版画（woodcut）风格，凸版印刷的雕刻语言，粗犷有力的刻线与凿痕（gouge mark），刀口转折明确、保留木纹与刻痕的粗糙手感，以密集排线塑造明暗，黑处为浓墨、白处为纸的留白，仅用黑白或极少的套色，边缘凌厉、无灰阶渐变；保持主体五官与姿态可辨`
+- **推荐 input_fidelity**：0.55
+- **适合**：人像、动物、风景
+- **避免**：不要写实光影、不要柔和平滑、不要彩色渐变
+- **与 #9 浮世绘的区别**：#9 是**日本**套色木版（平涂色块 + 装饰纹样），#42 是**单色凸版的雕刻线条**（靠刻线造体积），不要混用参照物
+
+### 43. 钢版雕刻（Intaglio Engraving / 纸币雕版线）
+- **关键词**：intaglio engraving, fine line, cross-hatched hatching, banknote engraving, guilloche, currency portrait, steel plate
+- **术语锚点**：**intaglio（凹版）**｜**cross-hatched hatching（交叉细排线）**｜**guilloche（扭索饰纹）**｜line engraving（线刻）
+- **参照物**：纸币与邮票上的**钢版雕刻人像**；旧证券、护照上的雕版线
+- **提示词模板**：`钢版雕刻（intaglio engraving）风格，纸币人像式的极细线刻（fine line engraving），全部明暗与体积由密到可见的平行与交叉细线（cross-hatched hatching）构成，线条纤细均匀、方向随形体流转，单色墨印在棉纸上，背景加入扭索饰纹（guilloche）与同心细线环，边缘有雕版压痕；保持主体五官与姿态准确可辨`
+- **推荐 input_fidelity**：**0.75**（线条要密而准，太低会把五官刻糊）
+- **适合**：人像、建筑、纹章类题材
+- **避免**：不要色块、不要粗黑轮廓、不要写实皮肤质感
+
+---
+
+## 九、艺术流派 · 观念
+
+> v4 新增（44–48）。这一类靠**艺术史中的某个"观念"**取胜，而不是靠材质。
+> 提示词里除了术语，**必须点出该流派的核心机制**（点彩的视觉混合、超现实的错置、欧普的视觉振动）。
+
+### 44. 点彩派（Pointillism / Divisionism）
+- **关键词**：pointillism, divisionism, Seurat, optical colour mixing, complementary contrast, en plein air
+- **术语锚点**：**pointillism（点彩）**｜**divisionism（分色主义）**｜optical mixing（视觉混合）｜complementary contrast（补色对比）
+- **参照物**：**乔治·修拉（Georges Seurat）**《大碗岛的星期天下午》；保罗·西涅克
+- **提示词模板**：`点彩派（pointillism / divisionism）风格，整幅由小而均匀的纯色圆点密集并置构成，不预先调色、依靠视觉混合（optical mixing）产生色彩，暖冷互补色点相邻堆叠形成光感与体积，外光写生下明快跳跃的空气感，近看是无数色点、远看形体清晰，像修拉式的点彩油画；保持主体轮廓、五官与构图不变`
+- **推荐 input_fidelity**：0.5
+- **适合**：风景、人物、水岸
+- **避免**：不要平滑笔触、不要厚涂刮刀痕、不要清晰单一的黑边线
+- **与 #31 印象派厚涂的区别**：#31 是**碎笔触（短线块）**，#44 是**纯色圆点**；两者都属印象派谱系，但笔触单位不同
+
+### 45. 超现实主义（Surrealism）
+- **关键词**：surrealism, Dali, Magritte, impossible juxtaposition, dream logic, hyperreal texture, uncanny scale
+- **术语锚点**：**surrealism（超现实主义）**｜**impossible juxtaposition（不可能并置）**｜dream logic（梦境逻辑）｜uncanny scale（异常比例）
+- **参照物**：**达利（Dalí）**、**马格利特（Magritte）**
+- **提示词模板**：`超现实主义（Surrealism）风格，达利与马格利特式的梦境逻辑（dream logic）：主体以照相级的写实质感（hyperreal texture）呈现，却被置于不可能的并置（impossible juxtaposition）之中——悬浮、错置或异常比例（uncanny scale），背景为无垠空旷的荒原或绝对静默的室内，柔和却带方向性的戏剧光，长时间曝光般的绝对静止，画面安静而令人不安；保持主体五官特征与姿态不变`
+- **推荐 input_fidelity**：0.6
+- **适合**：人像、静物、建筑
+- **避免**：不要卡通化、不要赛博霓虹、不要随手拼贴的廉价感、不要恐怖惊悚向
+
+### 46. 欧普艺术（Op Art）
+- **关键词**：Op Art, optical illusion, Bridget Riley, moiré, high-contrast black and white, vibrating line, geometric repetition
+- **术语锚点**：**Op Art（欧普艺术）**｜**moiré（摩尔纹）**｜optical vibration（视觉振动）｜geometric repetition（几何重复）
+- **参照物**：**布里奇特·赖利（Bridget Riley）**、维克托·瓦萨雷里
+- **提示词模板**：`欧普艺术（Op Art）风格，布里奇特·赖利式的视觉振动（optical vibration）：高对比的黑白或极少色相的细密几何条纹与波浪线重复排列，透过疏密与曲率的变化在平面上制造起伏、扭曲与摩尔纹（moiré），主体被这些条纹重新包裹与塑形，画面严格平面、无光影，注视久了产生眩晕感；保持主体轮廓与姿态可辨`
+- **推荐 input_fidelity**：0.45
+- **适合**：人像、图形、建筑
+- **避免**：不要立体光影、不要柔和渐变、不要涂鸦式随意、不要彩色多色相
+
+### 47. 湿壁画（Fresco）
+- **关键词**：fresco, buon fresco, plaster ground, cracked surface, earth pigments, matte, Renaissance wall
+- **术语锚点**：**buon fresco（湿壁画）**｜plaster ground（灰泥底）｜earth pigment（矿物土色）｜craquelure（龟裂）
+- **参照物**：乔托、拉斐尔签字厅壁画；庞贝壁画
+- **提示词模板**：`湿壁画（fresco）风格，在石灰灰泥（plaster ground）上作画，使用矿物土色颜料——赭石、土红、橄榄绿与灰蓝，完全哑光，色彩因渗入灰泥而略显粉化柔和，墙面有斑驳的龟裂（craquelure）、剥落与岁月污渍，笔触宽而肯定、不做细腻过渡，仿佛教堂或宫殿里的一面古老墙壁；保持主体五官与姿态可辨`
+- **推荐 input_fidelity**：0.6
+- **适合**：人像、古典／宗教题材、风景
+- **避免**：不要油画光泽、不要现代高饱和、不要无瑕的数码平滑、不要做旧滤镜式的假泛黄
+
+### 48. 教堂花窗（Stained Glass）
+- **关键词**：stained glass, leaded glass, backlit, jewel tones, black lead lines, gothic window, luminous
+- **术语锚点**：**leaded glass（铅条镶嵌玻璃）**｜backlight（背光穿透）｜jewel tone（宝石色）｜grisaille（灰色单彩玻璃）
+- **参照物**：沙特尔大教堂、巴黎圣母院的玫瑰花窗
+- **提示词模板**：`教堂彩绘花窗（stained glass）风格，主体由一块块彩色玻璃（leaded glass）拼合而成，粗黑的铅条勾勒每一块的轮廓与内部结构，强烈的背光穿透玻璃，宝石般的钴蓝、血红、琥珀与祖母绿发出通透的光，玻璃内部可见气泡、流纹与厚薄不均造成的深浅变化，整体嵌在石砌的哥特式窗框之中；保持主体轮廓、五官位置与构图不变`
+- **推荐 input_fidelity**：0.55
+- **适合**：人像、宗教题材、建筑
+- **避免**：不要写实光影、不要霓虹管发光质感、不要平滑渐变
+- **与 #29 霓虹玻璃的区别**：#29 是**现代霓虹管 + 玻璃折射**（通透、冷、未来感）；#48 是**铅条分割的彩色玻璃拼块**（有黑线骨架、暖、宗教感）
+
+---
+
+## 十、材质与手作
+
+> v4 新增（49–50）。核心是**把画面换成一种真实的物理材料**，成败取决于"材料的微观痕迹"是否写实。
+
+### 49. 手工刺绣（Embroidery）
+- **关键词**：embroidery, satin stitch, counted thread, visible weave, raised texture, silk floss, hand-stitched
+- **术语锚点**：**satin stitch（缎面绣）**｜**counted thread（数纱绣）**｜silk floss（丝光线）｜raised texture（浮雕质感）
+- **参照物**：中式苏绣；法式高定刺绣（Lesage 工坊）
+- **提示词模板**：`手工刺绣（embroidery）风格，整幅由丝线绣成——缎面绣（satin stitch）的平行线走向铺满色块，数纱绣（counted thread）的短针构成细部，丝线有清晰的捻向与柔和光泽，光线下形成细微的明暗起伏与浮雕质感（raised texture），底布为可见经纬的亚麻或丝绸，针脚边缘留有自然的线头与轻微不平整；保持主体五官、姿态与构图可辨`
+- **推荐 input_fidelity**：0.5
+- **适合**：人像、花卉、静物
+- **避免**：不要平滑印刷感、不要写实摄影质感、不要塑料或金属光泽、不要针织毛衣感（那是粗针织物，不是刺绣）
+
+### 50. 大理石雕塑（Marble Sculpture）
+- **关键词**：marble sculpture, carved stone, chisel marks, Carrara marble, subsurface scattering, museum lighting, monochrome white
+- **术语锚点**：**Carrara marble（卡拉拉大理石）**｜chisel mark（凿痕）｜subsurface scattering（次表面散射）｜drapery fold（衣褶）
+- **参照物**：米开朗基罗、贝尼尼的巴洛克大理石像
+- **提示词模板**：`大理石雕塑（marble sculpture）风格，主体被雕刻成一尊卡拉拉（Carrara）白色大理石的立体雕像，石面经打磨而温润，边缘与转折处留有细密的凿痕（chisel mark），皮肤与衣物呈现石头特有的半透散射（subsurface scattering）与柔和过渡，衣物褶皱被固化为厚重的石褶（drapery fold），美术馆式的顶部柔光配深色背景衬托，整体洁白、庄重、永恒；保持主体姿态、五官结构与构图不变`
+- **推荐 input_fidelity**：0.6
+- **适合**：人像、半身像、动物
+- **避免**：不要彩色、不要彩绘雕塑、不要塑料或 3D 打印质感、不要石膏的粉白死板感
+
+---
+
+## 十一、风格推导公式（用于未收录的风格）
 
 当用户要的风格不在上表时，按以下公式现场构造提示词，并在生成后把新条目追加到本文件：
 
@@ -409,7 +557,7 @@
 
 ---
 
-## 九、术语校准来源（GitHub 开放提示词资源）
+## 十二、术语校准来源（GitHub 开放提示词资源）
 
 v2 的术语与参照物来自以下公开资源（MIT/公开许可的提示词整理项目），仅用于术语校准，未复制其代码：
 
@@ -432,3 +580,4 @@ v2 的术语与参照物来自以下公开资源（MIT/公开许可的提示词�
 - **漫画/插画**：cel shading（赛璐璐）、lineart（线稿）、cross-hatching（交叉排线）、superflat（超扁平）、key visual（关键帧）
 - **摄影/胶片**：negative space（留白）、high-key / low-key、anamorphic（变形宽银幕）、shallow DOF（浅景深）、film grain（胶片颗粒）、silver gelatin（银盐）、teal & orange（青橙调）、soft focus（柔焦）
 - **流派锚点**：Expressionism（表现主义）、Fauvism（野兽派）、Impressionism（印象派）、Art Nouveau（新艺术）、Art Deco（装饰艺术）、Bauhaus（包豪斯）、Suprematism（至上主义）、Pop Art（波普）、Op Art（欧普）、Surrealism（超现实）、Cyberpunk（赛博朋克）、Vaporwave（蒸汽波）、Solarpunk、Steampunk（蒸汽朋克）、Retrofuturism（复古未来主义）
+- **v4 新增术语（38–50）**：gilded geometry（镀金几何）、whiplash curve（鞭形曲线）、photomontage（摄影拼贴）、spot ink／overprint／misregistration（专色／叠印／套印偏移）、relief print／gouge mark（凸版／凿痕）、intaglio／guilloche（凹版／扭索饰纹）、divisionism／optical mixing（分色主义／视觉混合）、impossible juxtaposition／uncanny scale（不可能并置／异常比例）、moiré／optical vibration（摩尔纹／视觉振动）、buon fresco／craquelure（湿壁画／龟裂）、leaded glass／grisaille（铅条镶嵌玻璃／灰色单彩玻璃）、satin stitch／counted thread（缎面绣／数纱绣）、Carrara marble／drapery fold（卡拉拉大理石／衣褶）

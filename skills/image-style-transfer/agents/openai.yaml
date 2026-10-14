@@ -1,6 +1,6 @@
 interface:
   display_name: "Image Style Transfer"
-  short_description: "Restyle any image into one of 37 art styles"
+  short_description: "Restyle any image into one of 50 art styles"
   default_prompt: "Use image-style-transfer to restyle this image into the style I name."
   brand_color: "#6C5CE7"
 
