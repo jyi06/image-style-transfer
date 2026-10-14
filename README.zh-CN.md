@@ -68,7 +68,7 @@
 
 ### Codex
 
-Codex 会扫描 `.agents/skills`（仓库级，一路向上到仓库根）和 `~/.agents/skills`（用户级）。
+Codex 会扫描 `.agents/skills`（仓库级，一路向上到仓库根）和 `~/.agents/skills`（用户级）。**但 Codex 桌面版读的是 `~/.codex/skills/`** —— 它自带的内置 skill 就放在那里，这也是在 Windows 上实测确认过的路径。
 
 ```bash
 # GitHub
@@ -82,7 +82,11 @@ mkdir -p ~/.agents/skills
 ln -s "$PWD/skills/image-style-transfer" ~/.agents/skills/image-style-transfer
 ```
 
-> 注意：**不是** `.codex/skills/` —— Codex 不扫描那个路径。软链接会被跟随，所以你可以直接在 checkout 里继续改。
+> **该装到哪个目录？** 开放 Agent Skills 约定的路径是 `.agents/skills`（Codex CLI、Cursor、Gemini CLI、Copilot 都读它），但**部分 Codex 版本（尤其是桌面版）读的是 `~/.codex/skills/`**。**如果装了不显示，就两个都装**——多一份几乎不占地方，省得猜。
+>
+> 软链接会被跟随，所以 `.agents/skills` 方式下你可以直接在 checkout 里继续改。Windows 下用 `Copy-Item -Recurse` 复制到 `%USERPROFILE%\.codex\skills\`，可以免去开开发者模式才能建软链接的麻烦。
+>
+> 装完记得**重启 Codex** —— skill 只在会话开始时加载。
 
 之后在 Codex 里用 `/skills` 或 `$image-style-transfer` 调用，也可以直接描述任务让它自动匹配。
 

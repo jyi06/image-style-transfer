@@ -68,7 +68,7 @@ Full prompts and parameters: [`skills/image-style-transfer/references/style-libr
 
 ### Codex
 
-Codex discovers skills in `.agents/skills` (repo-level, walking up to the repo root) and `~/.agents/skills` (user-level).
+Codex discovers skills in `.agents/skills` (repo-level, walking up to the repo root) and `~/.agents/skills` (user-level). **The Codex desktop app instead keeps its skills in `~/.codex/skills/`** — that is where its own bundled skills live, and it is the path verified on Windows.
 
 ```bash
 # GitHub
@@ -82,7 +82,11 @@ mkdir -p ~/.agents/skills
 ln -s "$PWD/skills/image-style-transfer" ~/.agents/skills/image-style-transfer
 ```
 
-> Note: **not** `.codex/skills/` — Codex does not scan that path. Symlinks are followed, so you can keep editing the checkout.
+> **Which directory?** The open Agent Skills convention — Codex CLI, Cursor, Gemini CLI, Copilot — is `.agents/skills`. Some Codex builds, notably the desktop app, read `~/.codex/skills/` instead. **If the skill does not show up, install it into both** — the second copy costs nothing and removes the guesswork.
+>
+> Symlinks are followed, so you can keep editing the checkout. On Windows, copying with `Copy-Item -Recurse` into `%USERPROFILE%\.codex\skills\` avoids needing developer mode for symlinks.
+>
+> Remember to **restart Codex** afterwards — skills are loaded when a session starts.
 
 Then in Codex, invoke with `/skills` or `$image-style-transfer`, or just describe the task and let it match.
 

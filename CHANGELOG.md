@@ -5,6 +5,16 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Fixed
+
+- The install notes claimed flatly that Codex never reads `~/.codex/skills/`.
+  That is wrong for at least one Codex build — the desktop app keeps its own
+  bundled skills in exactly that directory. The instructions now tell you to
+  install into both `.agents/skills` and `.codex/skills` if the skill does not
+  appear, and to restart Codex afterwards.
+
 ## [1.2.0] - 2026-10-14
 
 Thirty more styles, taking the library from 50 to 80. Styles 1–50 are untouched.
