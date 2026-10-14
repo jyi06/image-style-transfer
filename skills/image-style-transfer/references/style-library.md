@@ -1,14 +1,22 @@
-# 风格提示词库（Style Prompt Library） — 共 50 个风格
+# 风格提示词库（Style Prompt Library） — 共 80 个风格
 
 本文件是 image-style-transfer 的核心资产。每个风格给出**可直接使用的提示词模板**、
 **推荐输入保真度（input_fidelity）** 与 **适用场景**。
 
+> **v5 更新（2026-10-14）**：新增 **30 个风格（编号 51–80）**，形成四个新分节——
+> **十一、东亚传统（51–57）**、**十二、西方艺术史经典（58–65）**、
+> **十三、摄影与影像工艺（66–73）**、**十四、当代插画与数字（74–80）**。
+> 原「十一、风格推导公式」「十二、术语校准来源」顺延为 **十五 / 十六**。
+> ⚠️ **1–50 的编号一个都没动**（新条目一律**追加在末尾**）：编号是用户与旧文档引用的事实接口，
+> 中途插入会让所有后续编号错位。**今后扩充也请照此办理 —— 只追加，不插入。**
+> 分类分布（共 80）：文艺杂志 4 ｜ 绘画手作 6 ｜ 潮流数字 6 ｜ 复古胶片 5 ｜ 动漫插画 5 ｜
+> 特殊材质·色调·表现主义 6 ｜ 编辑设计·纸刊与海报 5 ｜ 印刷平面·装饰 6 ｜ 艺术流派·观念 5 ｜ 材质手作 2 ｜
+> **东亚传统 7** ｜ **西方艺术史经典 8** ｜ **摄影与影像工艺 8** ｜ **当代插画与数字 7**。
+>
 > **v4 更新（2026-10-14）**：新增 **13 个风格（编号 38–50）**，形成三个新分节——
 > **八、印刷·平面·装饰艺术（38–43）**、**九、艺术流派·观念（44–48）**、**十、材质与手作（49–50）**。
-> ⚠️ **1–37 的编号一个都没动**（新条目一律**追加在末尾**）：编号是用户与旧文档引用的事实接口，
-> 中途插入会让所有后续编号错位。**今后扩充也请照此办理 —— 只追加，不插入。**
-> 分类分布：文艺杂志 4 ｜ 绘画手作 6 ｜ 潮流数字 6 ｜ 复古胶片 5 ｜ 动漫插画 5 ｜
-> 特殊材质·色调·表现主义 6 ｜ 编辑设计·纸刊与海报 5 ｜ **印刷平面·装饰 6** ｜ **艺术流派·观念 5** ｜ **材质手作 2**。
+> 分类分布（当时共 50）：文艺杂志 4 ｜ 绘画手作 6 ｜ 潮流数字 6 ｜ 复古胶片 5 ｜ 动漫插画 5 ｜
+> 特殊材质·色调·表现主义 6 ｜ 编辑设计·纸刊与海报 5 ｜ 印刷平面·装饰 6 ｜ 艺术流派·观念 5 ｜ 材质手作 2。
 >
 > **v3 更新（2026-10-12）**：风格库重排为**连续编号 1–37**（此前 #26 JOJO 与 #32 表现主义厚涂
 > 因后续新增而编号错位，现按分类位置归位），并统一了编号 ↔ 分类 ↔ `style-menu.md` 菜单三处的对应关系。
@@ -535,7 +543,309 @@
 
 ---
 
-## 十一、风格推导公式（用于未收录的风格）
+## 十一、东亚传统
+
+> v5 新增（51–57）。共同点：**用东亚传统书画／器物的"媒介语言"重做画面**——纸、绢、矿彩、单色墨线、釉下青花、金线。
+> 辨识度来自三件事：**① 单色或极克制的色域 ② 明确的"载体"（绢本、宣纸、瓷胎、墙面、棉布）③ 装饰性的平面秩序**。
+> ⚠️ 提示词里**必须把"载体"写出来**（绢本设色 / 宣纸 / 瓷胎 / 泥壁），否则模型只会给一层"中国风滤镜"。
+
+### 51. 工笔重彩（Gongbi）
+- **关键词**：gongbi, fine-line brushwork, mineral pigment, silk ground, meticulous, layered flat colour, iron-wire line
+- **术语锚点**：**gongbi（工笔）**｜fine-line brushwork（细线勾勒）｜mineral pigment（矿物颜料：石青／石绿／朱砂／蛤白）｜silk ground（绢本）｜**iron-wire line（铁线描）**
+- **参照物**：唐宋院体工笔（《簪花仕女图》《捣练图》《韩熙载夜宴图》）；于非闇、陈之佛的现代工笔
+- **提示词模板**：`中国工笔画（gongbi）风格，绢本设色，以细而匀的墨线勾勒轮廓（细线勾勒、铁线描），轮廓内用石青、石绿、朱砂、蛤白等矿物颜料层层积染（三矾九染）而成，色块平整明净、边缘利落，几乎不见笔触；衣纹以流畅的游丝描组织，发丝与眉眼刻画精细、根根分明；背景为纯色绢地或极简的折枝花石，大量留白；整体工整、雅致、设色明快而不艳；保持主体五官、姿态与构图不变`
+- **推荐 input_fidelity**：0.55
+- **适合**：人像、花卉、禽鸟
+- **避免**：不要写意飞白、不要油画笔触与厚涂、不要写实摄影质感、不要西式透视与强投影
+
+### 52. 青绿山水（Blue-Green Landscape）
+- **关键词**：blue-green landscape, qinglu shanshui, mineral azurite and malachite, gold outline, silk ground, decorative mountain forms
+- **术语锚点**：**qinglu shanshui（青绿山水）**｜mineral azurite & malachite（石青／石绿）｜**gold outline（泥金勾线）**｜decorative stylised mountain（装饰化山形）
+- **参照物**：王希孟《千里江山图》；展子虔《游春图》；《江山秋色图》
+- **提示词模板**：`中国青绿山水画风格，以石青、石绿等矿物颜料敷色，绢本设色；山形被概括为装饰性的层叠体块，山石轮廓与结构线以泥金勾提（gold outline），山顶与坡脚的石青由浓到淡自然过渡（赭石打底、青绿罩染）；云气以留白与淡粉渲染表现，水面留白或施极淡的花青；色彩明丽厚重、沉着而不俗；保持主体位置与整体构图可辨`
+- **推荐 input_fidelity**：0.5
+- **适合**：风景、建筑、人物（作为点景）
+- **避免**：不要水墨写意、不要西式光影与透视、不要照片质感、不要油画的厚涂肌理
+
+### 53. 白描（Baimiao）
+- **关键词**：baimiao, outline drawing, single-colour ink line, no shading, iron-wire line, silkworm-thread line, calligraphic rhythm
+- **术语锚点**：**baimiao（白描）**｜**iron-wire line（铁线描）**｜**silkworm-thread line（游丝描）**｜no shading（不施墨色）
+- **参照物**：李公麟白描；《八十七神仙卷》；陈洪绶的人物线描；《朝元仙仗图》
+- **提示词模板**：`中国白描（baimiao）风格，仅以单色墨线勾勒物象，完全不用明暗与色块；线条为铁线描／游丝描一路，粗细有致、起收有顿挫，行笔有书法般的节律与呼吸感；衣纹的转折与叠压交代清楚，密处不闷、疏处不空；背景留白，仅在必要处以极淡的墨色略作点染；保持主体五官、姿态与构图准确可辨`
+- **推荐 input_fidelity**：**0.7**（全靠线条承载形体，压太低五官会走形）
+- **适合**：人像、衣纹、花鸟
+- **避免**：不要任何色块与明暗、不要交叉排线（那是 #8 素描／#24 美漫）、不要石墨的粗颗粒、不要照片质感
+
+### 54. 敦煌壁画（Dunhuang Mural）
+- **关键词**：Dunhuang mural, cave painting, mineral pigment, oxidised colour, flying apsara, decorative border band, weathered wall
+- **术语锚点**：mineral pigment（矿物颜料：石青／石绿／土红／铅丹）｜**oxidised／darkened flesh（变色发黑的肤色）**｜decorative border band（装饰边饰）｜**flying apsara（飞天）**
+- **参照物**：莫高窟第 220、285、320 窟；榆林窟；克孜尔石窟
+- **提示词模板**：`敦煌壁画风格，矿彩重彩绘制在粗粝的泥壁之上：土红、石青、石绿与蛤白平涂，线条为遒劲的墨线或土红线，形体略带稚拙的装饰性夸张；部分颜色因千年氧化而变黑变暗（尤其是人体的肤色），壁面遍布剥落、裂纹与烟熏的斑驳痕迹；画面四周环绕联珠纹、卷草纹或忍冬纹的装饰边饰；人物有飘带翻卷、动势飞扬的飞天感；保持主体五官与姿态可辨`
+- **推荐 input_fidelity**：0.5
+- **适合**：人像、群像、装饰题材
+- **避免**：不要平滑无瑕的数字感、不要现代高饱和实色、不要西式明暗造型、**不要干净崭新的壁画**（风化与剥落是本体特征之一）
+
+### 55. 青花瓷（Blue-and-White Porcelain）
+- **关键词**：blue-and-white porcelain, underglaze cobalt, qinghua, ceramic glaze, Ming style, banded border, crackle
+- **术语锚点**：**underglaze cobalt（釉下钴蓝）**｜glaze（釉面）｜**crackle／craquelure（开片冰裂）**｜banded border（弦纹边饰）｜窑变晕散（kiln drift）
+- **参照物**：元青花（萧何月下追韩信梅瓶）；明永宣青花；克拉克瓷
+- **提示词模板**：`青花瓷（blue-and-white porcelain）风格，画面以釉下钴蓝单色绘制在洁白的瓷胎上：蓝料浓处发深沉的黑蓝、淡处呈清透的灰蓝，全画只有白底与蓝料两色；笔触为勾线与分水相结合的瓷绘语言，浓淡层次分明、有分水的自然积边；主体外围绕以弦纹、缠枝莲、回纹或云肩式开光的边饰带；釉面有温润的反光与细密的开片冰裂（crackle），边缘可见窑变的轻微晕散；保持主体轮廓、五官与构图不变`
+- **推荐 input_fidelity**：0.5
+- **适合**：静物、花鸟、人像（作为器物纹样）
+- **避免**：不要多色、不要油画笔触、不要纸质肌理、不要现代摄影的镜面高光
+
+### 56. 唐卡（Thangka）
+- **关键词**：thangka, Tibetan Buddhist scroll painting, mineral pigment, gold line, flat symbolic composition, brocade mount, mandala
+- **术语锚点**：mineral pigment（矿物颜料）｜**gold line（金线勾勒）**｜flat symbolic composition（平面象征性构图）｜brocade mount（锦缎装裱）｜mandala（坛城图式）
+- **参照物**：西藏与热贡唐卡；坛城（mandala）；藏传佛教卷轴画
+- **提示词模板**：`藏传佛教唐卡（thangka）风格，矿物颜料绘于棉布（棉布画心）之上：石青、石绿、朱红、金与蛤白高度饱和而庄重；人物轮廓与衣纹以金线勾提（gold line），形体端正对称、比例程式化，平面化处理、不设透视与投影；背光、莲座、卷草与祥云等象征性元素环绕主体，构图严密对称、装饰性极强；四周为锦缎装裱式的边框；保持主体五官位置与整体姿态可辨`
+- **推荐 input_fidelity**：0.5
+- **适合**：人像、宗教题材、装饰画
+- **避免**：不要写实光影、不要随手涂鸦感、不要现代矢量扁平的简化、不要低饱和灰调
+
+### 57. 金石拓片（Stele Rubbing）
+- **关键词**：stele rubbing, ink rubbing, stone carving, uneven inking, paper pressed into grooves, weathered stone, epigraphy
+- **术语锚点**：**ink rubbing（拓本）**｜relief carving（阳文／阴文刻）｜uneven inking（拓墨不匀）｜paper into the groove（纸入凹槽）｜碑刻崩口（chipped edge）
+- **参照物**：汉碑与北朝造像记的拓本；秦砖汉瓦拓片；汉画像砖拓片
+- **提示词模板**：`金石拓片（stele rubbing）风格，画面如同从一块风化石碑上拓下：宣纸被压入凹刻的线条之中，凸起处着墨、凹处留白，墨色浓淡不匀、有斑驳的飞白与漏拓；石面的裂纹、剥落与风化痕迹一并留在纸上，边缘为不规则的纸边；字口与线条因石刻而方硬有力、转折处略见崩口；整体为纯黑与纸白的单色，古拙、厚重、有金石气；保持主体轮廓与五官可辨`
+- **推荐 input_fidelity**：0.55
+- **适合**：人像、纹样、文字类题材
+- **避免**：不要柔和渐变、不要彩色、**不要木刻的刀痕感（那是 #42 木刻版画）**、不要均匀干净的印刷效果
+
+---
+
+## 十二、西方艺术史经典
+
+> v5 新增（58–65）。这一类从**西方艺术史的某个具体时期／流派**取语言。
+> 与第八节（印刷工艺）、第九节（观念流派）的分工：这里拼的是**造型与色彩体系**，
+> 提示词要点出**该时期特有的形体处理方式与用光方式**，而不是只写一个流派名。
+
+### 58. 拜占庭马赛克（Byzantine Mosaic）
+- **关键词**：Byzantine mosaic, tessera, gold ground, hieratic frontal pose, smalti, Ravenna, icon
+- **术语锚点**：**tessera（马赛克镶嵌小块）**｜**gold ground（金底）**｜hieratic frontal（正面端坐的圣像程式）｜smalti（玻璃马赛克料）｜灰缝（grout line）
+- **参照物**：拉文纳圣维塔莱教堂《查士丁尼与侍从》；圣索菲亚大教堂；克里特圣像画
+- **提示词模板**：`拜占庭马赛克（Byzantine mosaic）风格，整幅由无数细小的方形马赛克小块（tessera）拼成，块与块之间留有灰缝、角度略有偏斜因而表面起伏闪烁；背景为整片耀眼的金底（gold ground）；人物呈正面对称端坐的圣像程式（hieratic frontal），五官大而沉静、目光平视，衣褶被归纳为程式化的折线；色彩为金、深蓝、翠绿、朱红与白，庄重肃穆、超越时间；保持主体五官位置与姿态可辨`
+- **推荐 input_fidelity**：0.5
+- **适合**：人像、宗教题材、装饰
+- **避免**：不要写实光影、不要 3D 渲染、不要平滑渐变、不要现代摄影质感
+
+### 59. 中世纪手抄本（Illuminated Manuscript）
+- **关键词**：illuminated manuscript, gold leaf, vellum, decorated initial, marginalia, tempera, gothic
+- **术语锚点**：**gold leaf（金箔贴饰）**｜vellum（羊皮纸）｜**decorated initial（装饰首字母）**｜marginalia（页边装饰）｜historiated initial（故事首字母）
+- **参照物**：《凯尔斯书》；林堡兄弟《贝里公爵的豪华时祷书》；《温切斯特圣经》
+- **提示词模板**：`中世纪泥金装饰手抄本（illuminated manuscript）风格，画在泛黄的羊皮纸（vellum）上；主体被置于一个华丽的装饰首字母或藤蔓式边框之内，边框由金箔贴饰（gold leaf）、红蓝矿物颜料与细密的藤蔓卷叶纹组成；人物造型平面化、比例稚拙、姿态程式化，以蛋彩（tempera）平涂并用金线勾提；纸面可见虫蛀、水渍与磨损，页边点缀小花与小走兽的页边装饰（marginalia）；保持主体五官与姿态可辨`
+- **推荐 input_fidelity**：0.5
+- **适合**：人像、纹章、装饰画
+- **避免**：不要写实透视、不要现代扁平插画、不要数码渐变、不要靠滤镜硬做的假泛黄
+
+### 60. 维米尔式室内光（Vermeer Interior Light）
+- **关键词**：Vermeer, Dutch Golden Age, north light, quiet interior, ultramarine and ochre, camera obscura softness, domestic stillness
+- **术语锚点**：**north light（北向窗光）**｜ultramarine（群青）｜ochre（赭黄）｜camera obscura softness（暗箱式的柔焦）｜quiet interior（静默室内）
+- **参照物**：**约翰内斯·维米尔（Johannes Vermeer）**《戴珍珠耳环的少女》《倒牛奶的女仆》；彼得·德·霍赫
+- **提示词模板**：`荷兰黄金时代的室内油画风格，维米尔式的左向柔和窗光（north light）从画面一侧斜射进来，在墙面与人物上形成细腻的明暗过渡与淡淡的柔焦（暗箱式的柔焦）；色彩为温润的赭黄、土红与沉稳的群青（ultramarine），颜料有细微的颗粒与珍珠般的柔光；空间安静、时间仿佛静止，人物姿态含蓄内敛，背景为简洁的室内墙面与少量静物；保持主体五官特征、姿态与构图不变`
+- **推荐 input_fidelity**：0.55
+- **适合**：人像、室内、静物
+- **避免**：不要戏剧化的硬光与深黑背景（那是 #61 巴洛克）、不要高饱和、不要现代摄影的锐利、不要厚涂刮刀痕
+
+### 61. 巴洛克（Baroque）
+- **关键词**：Baroque, Caravaggio, tenebrism, dramatic diagonals, theatrical light, rich drapery, chiaroscuro
+- **术语锚点**：**tenebrism（暗色调主义）**｜**chiaroscuro（明暗对照）**｜diagonal composition（对角构图）｜theatrical gesture（戏剧化姿态）
+- **参照物**：**卡拉瓦乔（Caravaggio）**、鲁本斯、伦勃朗、贝尼尼
+- **提示词模板**：`巴洛克（Baroque）油画风格，卡拉瓦乔式的暗色调主义（tenebrism）：全画沉浸在深重的暗部之中，一束强烈的戏剧光从侧上方斜射，把主体从漆黑里"切"出来；背景几乎全黑，明暗交界极其锐利；构图沿对角线展开，姿态富有舞台感与动势；衣着为厚重华丽的织物，褶皱丰盈，色彩浓郁（深红、金褐、墨绿、铅白），笔触奔放；保持主体五官特征与整体姿态可辨`
+- **推荐 input_fidelity**：0.55
+- **适合**：人像、群像、静物
+- **避免**：不要平光、不要明亮通透的均匀照明（那是 #60 维米尔）、不要低饱和灰调、不要现代照片的干净背景
+- **与 #5 油画风的分工**：#5 是**通识的古典油画技法**（厚涂 + 罩染），不锁定时代；**#61 特指巴洛克的舞台式用光与对角动势**——暗部更重、光更硬。要"美术馆里的油画"用 **5**，要"戏剧性的深黑对比"用 **61**
+
+### 62. 洛可可（Rococo）
+- **关键词**：Rococo, pastel palette, fête galante, rocaille, asymmetric ornament, silky fabric, light-hearted
+- **术语锚点**：**fête galante（雅宴画）**｜pastel palette（粉彩调）｜**rocaille（贝壳涡卷装饰）**｜asymmetric ornament（非对称装饰）
+- **参照物**：**华托（Watteau）**、**布歇（Boucher）**、弗拉戈纳尔；凡尔赛的小特里亚农宫
+- **提示词模板**：`洛可可（Rococo）风格，柔美轻盈的粉彩调（pastel palette）——粉红、淡蓝、薄荷绿、奶油白与浅金；光线明亮而漫射，画面轻松愉悦、带贵族式的闲适；人物衣着为丝绸与缎带，褶皱柔软流转、有细密的反光；背景点缀贝壳涡卷（rocaille）与缠枝纹样的非对称装饰，可浅淡地融入画面边缘；笔触轻柔、色彩清透；保持主体五官特征与姿态不变`
+- **推荐 input_fidelity**：0.55
+- **适合**：人像、风景、静物
+- **避免**：不要深黑暗部、不要硬光、不要高饱和原色、不要粗犷的厚涂笔触
+
+### 63. 立体主义（Cubism）
+- **关键词**：Cubism, geometric fragmentation, simultaneous viewpoints, analytic cubism, faceted planes, ochre and grey
+- **术语锚点**：**analytic cubism（分析立体主义）**｜**faceted plane（切面）**｜**simultaneous viewpoint（多视点并置）**｜papier collé（拼贴）
+- **参照物**：**毕加索（Picasso）**与**布拉克（Braque）**的 1910–1913 时期；胡安·格里斯
+- **提示词模板**：`立体主义（Cubism）风格，主体被拆解为无数几何切面（faceted plane），同时从多个视点并置呈现（simultaneous viewpoint）——正脸与侧脸、正面与俯视在同一画面里交叠；轮廓被打散又重新咬合，形体在画面上摊平、悬浮、相互穿插；色彩极度克制，只用赭石、灰、褐、橄榄绿与黑，几乎不表现体积与光源；保留画布的粗织肌理与断续的笔触；保持主体的关键身份特征（发色、服装、姿态）可辨`
+- **推荐 input_fidelity**：0.4
+- **适合**：人像、静物、乐器
+- **避免**：不要写实光影、不要柔和渐变、不要单一视点、不要明快高饱和
+
+### 64. 抽象表现主义 · 行动绘画（Action Painting）
+- **关键词**：Abstract Expressionism, action painting, Jackson Pollock, drip and splatter, all-over composition, gestural
+- **术语锚点**：**action painting（行动绘画）**｜**drip technique（滴洒法）**｜**all-over composition（满幅构图）**｜gestural mark（书写性笔痕）
+- **参照物**：**杰克逊·波洛克（Jackson Pollock）**、威廉·德·库宁、弗朗茨·克莱因
+- **提示词模板**：`抽象表现主义的行动绘画（action painting）风格，颜料以滴洒、泼溅、甩掷的方式（drip）落在平铺的画布上，形成层层交叠、粗细不一的线条与色斑；全画为满幅构图（all-over）、没有焦点与留白，笔触充满速度与身体的动势；色彩以黑、白、铝银、赭红与深蓝为主，颜料有厚薄与光泽差；主体的轮廓只以隐约的色块暗示，人形从纷乱的颜料中浮现又被吞没；保持主体的姿态与整体剪影可辨`
+- **推荐 input_fidelity**：0.35
+- **适合**：人像（抽象化）、场景、情绪表达
+- **避免**：不要清晰的轮廓线、不要写实细节、不要居中构图与留白、不要干净整齐的色块
+
+### 65. 克里姆特金箔（Klimt Gold Leaf）
+- **关键词**：Gustav Klimt, gold leaf, gold ground, ornamental pattern, Byzantine influence, decorative flattening, mosaic
+- **术语锚点**：**gold leaf（金箔）**｜**gold ground（金底）**｜ornamental pattern（装饰纹样：漩涡、方块、眼形）｜decorative flattening（装饰性平面化）
+- **参照物**：**古斯塔夫·克里姆特（Gustav Klimt）**《吻》《阿黛尔·布洛赫-鲍尔像》；拉文纳马赛克的直接影响
+- **提示词模板**：`克里姆特（Gustav Klimt）风格，整幅大面积使用金箔（gold leaf）铺出耀眼的金底（gold ground）；人物与衣物被压缩为平面，其上覆盖密集的装饰纹样——同心漩涡、长方形与眼形图案、几何金线；面部与手部是全画唯一的三维写实区域，肌肤细腻柔和，与周围华丽的平面装饰形成强烈反差；色彩为金、黑、深红、翠绿与紫；整体华丽、感官、带拜占庭式的装饰感；保持主体五官特征与姿态可辨`
+- **推荐 input_fidelity**：0.5
+- **适合**：人像、双人像、装饰画
+- **避免**：不要写实背景、不要平淡单色、不要廉价的金色渐变、不要 3D 渲染的金属材质
+- **与 #58 拜占庭马赛克的分工**：#58 强调**小块拼贴的物理肌理 + 圣像程式**；#65 强调**金箔平面 + 装饰纹样 + 写实面孔的反差**。要"古教堂的镶嵌感"用 58，要"金色装饰画"用 65
+
+---
+
+## 十三、摄影与影像工艺
+
+> v5 新增（66–73）。这一类拼的是**某一项具体的摄影／影像工艺**，而不是"胶片感"这种笼统的调子。
+> 关键写法：**把该工艺独有的物理缺陷写出来**——湿版的药液流痕、蓝晒的普鲁士蓝、CRT 的扫描线、长曝的丝绢水流。
+
+### 66. 湿版摄影（Wet Plate Collodion）
+- **关键词**：wet plate collodion, tintype, ambrotype, uneven coating, vignetted edges, silver halide, antique portrait
+- **术语锚点**：**wet plate collodion（湿版火棉胶）**｜tintype（锡版）／ambrotype（玻璃版）｜**uneven collodion pour（药液铺设不匀的流痕）**｜vignetted edge（边缘暗角）
+- **参照物**：十九世纪肖像馆的湿版人像；美国内战时期的 tintype；朱莉娅·玛格丽特·卡梅隆
+- **提示词模板**：`十九世纪湿版摄影（wet plate collodion）风格，影像呈现在一张涂布不均的深色金属或玻璃板上：边缘有明显的暗角与化学药液流淌的痕迹，四角发黑、轮廓不规则（药液铺设不匀的流痕）；画面为单色的深褐／灰黑，高光是乳白、暗部沉稳；正面硬光直打、曝光略长，被摄者保持长时间曝光下的僵直姿态，皮肤在蓝光敏化下略显苍白；板面有划痕、灰尘与手工涂布的条纹；保持主体五官特征与姿态不变`
+- **推荐 input_fidelity**：0.6
+- **适合**：人像、静物
+- **避免**：不要现代照片的干净边缘、不要彩色、不要平滑无瑕的渐变、不要锐利的数码高光
+
+### 67. 蓝晒（Cyanotype）
+- **关键词**：cyanotype, Prussian blue, photogram, sun print, blueprint, botanical silhouette, brush coating marks
+- **术语锚点**：**cyanotype（蓝晒法）**｜**Prussian blue（普鲁士蓝）**｜photogram（物影照片）｜brush coating mark（刷涂痕）
+- **参照物**：安娜·阿特金斯（Anna Atkins）的藻类蓝晒图谱；工程蓝图
+- **提示词模板**：`蓝晒（cyanotype）风格，整幅只有普鲁士蓝（Prussian blue）与纸白两色，深浅由曝光时间决定：受光处为深邃的蓝，遮挡处留下青白的纸底；底色上可见手工刷涂感光液时留下的笔刷痕与不匀的边，纸面有纤维肌理；主体以剪影般的锐利轮廓呈现、内部细节被大块简化，边缘过渡硬朗；整体是十九世纪植物图谱与工程蓝图的气息；保持主体轮廓、五官位置与构图可辨`
+- **推荐 input_fidelity**：0.5
+- **适合**：植物、静物、人像剪影
+- **避免**：不要多色、不要柔和渐变、不要现代数码感、不要写实的皮肤质感
+
+### 68. 反转片（Kodachrome）
+- **关键词**：Kodachrome, slide film, reversal film, saturated reds, fine grain, high contrast, mid-century colour photography, slide projection
+- **术语锚点**：**reversal film（反转片）**｜Kodachrome｜saturated red（饱和的红）｜fine grain（细颗粒）｜slide projection（幻灯投影）
+- **参照物**：柯达克罗姆（Kodachrome）拍摄的二十世纪中叶彩色照片；《国家地理》的早期彩色报道
+- **提示词模板**：`柯达克罗姆（Kodachrome）反转片风格，色彩浓郁而不失通透——红与黄格外饱满、蓝绿深沉；反差偏高，高光处带微微的暖调；颗粒极细、画面干净锐利，有幻灯片般的立体感与年代的距离感；光线为直射的自然阳光，阴影深而清晰；整体是二十世纪中叶彩色报道摄影的气质；保持主体五官特征、姿态与构图不变`
+- **推荐 input_fidelity**：0.72
+- **适合**：人像、街景、风光
+- **避免**：不要褪色的怀旧黄调（那是 #21 拍立得）、不要现代 HDR 的高动态、不要青橙电影调（那是 #17）、不要低饱和
+
+### 69. 长曝光（Long Exposure）
+- **关键词**：long exposure, silky water, light trails, motion blur, ND filter, streaked clouds, ghosting
+- **术语锚点**：**long exposure（长曝光）**｜**light trail（光轨）**｜**silky water（丝绢水流）**｜ND filter（中性密度滤镜）｜ghosting（人影拖影）
+- **参照物**：经典风光长曝摄影；城市夜景车流；迈克尔·肯纳式的宁静长曝
+- **提示词模板**：`长曝光摄影风格：流动的水面被抹平为丝绢般的乳白平面（silky water），云层拉出平滑的条带，车灯与光源成为连续的光轨（light trail），人流化作半透明的拖影；静止的建筑与主体保持绝对锐利、纹丝不动，与流动的部分形成强烈对比；整体画面光滑、干净，时间被压缩成一种超现实的静止；保持主体五官特征与静态姿态不变`
+- **推荐 input_fidelity**：0.6
+- **适合**：风光、城市、水面、静物
+- **避免**：不要全画面模糊、不要手抖式的抖动模糊、不要过度 HDR、**不要主体也糊掉**（主体必须锐利）
+
+### 70. 双重曝光（Double Exposure）
+- **关键词**：double exposure, multiple exposure, overlay blend, silhouette fill, in-camera, dreamlike
+- **术语锚点**：**double exposure（双重曝光）**｜overlay blend（叠加混合）｜**silhouette fill（剪影填充）**｜in-camera（机内合成）
+- **参照物**：机内双重曝光的胶片实验；时尚摄影中的剪影叙事
+- **提示词模板**：`双重曝光（double exposure）摄影风格，两张影像在同一张底片上叠加：主体被处理为半透明的剪影（剪影填充），其内部透出第二重影像——森林、山峦、花枝、城市天际线或水纹；两层的明暗关系彼此咬合，主体轮廓仍然清晰可辨，内部细节与外层风景共同呼吸；整体色调统一（可偏青绿、暖褐或冷灰），画面安静、诗意、略带梦的超现实感；保持主体轮廓与姿态可辨`
+- **推荐 input_fidelity**：0.5
+- **适合**：人像、动物、风景
+- **避免**：不要生硬的图层粘贴感、不要两份内容各占一半、不要杂乱堆叠、不要丢掉主体轮廓
+
+### 71. 移轴微缩（Tilt-Shift Miniature）
+- **关键词**：tilt-shift, miniature effect, shallow focus band, high saturation, aerial viewpoint, toy-like scale
+- **术语锚点**：**tilt-shift（移轴）**｜**miniature effect（微缩效果）**｜shallow focus band（窄焦平面带）｜aerial viewpoint（俯瞰视角）｜toy scale（玩具比例）
+- **参照物**：移轴镜头拍摄的城市俯瞰照片；文森特·拉福雷式的微缩城市
+- **提示词模板**：`移轴（tilt-shift）微缩景观摄影风格，从高处俯瞰，画面只在中间一条窄带内保持清晰，上下迅速虚化（miniature effect）；色彩被推高饱和度、对比略强，光线明亮干净，物体边缘锐利；比例感被改写——真实的场景看起来像一套精巧的玩具模型或沙盘；主体处于清晰带上、质感细致；保持主体轮廓与整体布局可辨`
+- **推荐 input_fidelity**：0.5
+- **适合**：风景、城市、街景
+- **避免**：**不要普通的浅景深虚化**（必须是"上下两条虚化带 + 中间清晰带"的窄带式）、不要低饱和、不要阴沉的色调
+
+### 72. 故障艺术（Glitch Art）
+- **关键词**：glitch art, datamosh, pixel sorting, chromatic aberration, scanline displacement, RGB split, digital corruption
+- **术语锚点**：**glitch（故障）**｜datamosh（数据压制）｜**pixel sorting（像素排序拉伸）**｜**RGB split／chromatic aberration（通道分离）**｜scanline displacement（扫描线错位）
+- **参照物**：数字故障艺术；视频压缩伪影；RGB 分离的当代设计
+- **提示词模板**：`故障艺术（glitch art）风格，画面呈现数字文件损坏后的视觉：横向的像素条带被拉伸、错位与撕裂，颜色通道相互分离（RGB split）在边缘产生红绿青的色差，局部出现像素排序式的拉伸条纹（pixel sorting）与压缩产生的块状噪点，扫描线不规则地跳变；主体在故障中仍然可辨认，但被切碎、重排、部分丢失；整体是深色底配高饱和的电子色；保持主体轮廓的关键特征可辨`
+- **推荐 input_fidelity**：0.45
+- **适合**：人像、城市、产品
+- **避免**：不要整齐的滤镜特效、不要柔和渐变、不要可爱化、**不要破坏到看不出主体**
+
+### 73. 模拟录像 · CRT（Analog Video / CRT）
+- **关键词**：analog video, CRT scanlines, VHS, phosphor glow, chromatic bleeding, interlace, tracking error
+- **术语锚点**：**CRT scanline（阴极射线管的扫描线）**｜**phosphor glow（荧光粉辉光）**｜chromatic bleeding（色溢）｜tracking error（磁迹错位）｜interlace（隔行扫描）
+- **参照物**：八十年代的家用录像带画面；老式显像管电视的播出画面；电视录制的演唱会录像
+- **提示词模板**：`模拟录像／显像管（CRT）画面风格：屏幕上有细密清晰的水平扫描线（scanline）与隔行扫描的细微抖动，高光处溢出荧光粉般的柔和辉光（phosphor glow），颜色在边缘出现红蓝的横向色溢，画面有轻微的磁迹错位与噪点带，四角有球面管的暗角与轻微变形；整体色调偏暗、对比偏低，带旧录像带的褪色感；保持主体五官特征与姿态可辨`
+- **推荐 input_fidelity**：0.55
+- **适合**：人像、场景、怀旧题材
+- **避免**：不要现代高清的锐利感、不要赛博朋克的霓虹双色（那是 #11）、**不要失真到看不清主体**、不要廉价滤镜包
+
+---
+
+## 十四、当代插画与数字
+
+> v5 新增（74–80）。这一类是**当代插画／数字创作的流行语汇**，常见于独立出版物、品牌视觉与社媒插画。
+> 关键是把**绘制工具与造型规则**写清楚（矢量、单线、等距体素、扁平淡彩、粗轮廓平涂），而不是笼统地说"插画风"。
+
+### 74. 超扁平（Superflat）
+- **关键词**：Superflat, Takashi Murakami, flat planes, kawaii, otaku culture, bold outline, pop surfaces
+- **术语锚点**：**Superflat（超扁平）**｜flat plane（平面化）｜kawaii（可爱）｜bold flat outline（粗平涂轮廓）
+- **参照物**：**村上隆（Takashi Murakami）**；奈良美智（作为"可爱但不超扁平"的对照）
+- **提示词模板**：`超扁平（Superflat）插画风格，画面被彻底压平，没有任何透视、景深与体积，所有元素像贴纸一样并置在同一个平面上；粗而均匀的黑色轮廓线内填高饱和的平涂色块；造型可爱且高度符号化，图案化与重复性纹样（花朵、眼睛、云）铺满背景；色彩明快、对比强烈，带强烈的消费文化与御宅族审美；保持主体五官的关键特征与姿态可辨`
+- **推荐 input_fidelity**：0.5
+- **适合**：人像、角色、图形
+- **避免**：不要立体光影、不要写实比例、不要柔和的渐变色、不要西式水彩的空气透视
+
+### 75. 法式 BD · 墨比斯线（Bande Dessinée / Moebius Line）
+- **关键词**：bande dessinée, Moebius, ligne claire, clean contour line, flat local colour, European graphic novel
+- **术语锚点**：**bande dessinée（法比漫画）**｜**ligne claire（清晰线条）**｜clean contour（均匀轮廓线）｜flat local colour（平涂固有色）
+- **参照物**：**墨比斯（Moebius / 让·吉罗）**；埃尔热《丁丁历险记》（ligne claire）；恩基·比拉尔
+- **提示词模板**：`法比漫画（bande dessinée）风格，墨比斯式的清晰线条（ligne claire）：所有形体都由粗细均匀、干净利落的黑色轮廓线界定，轮廓内平涂固有色，仅用一层很淡的单色阴影交代体积，不做强烈光影；色彩为克制的灰蓝、赭黄与暖白，画面通透、精确、有呼吸感；背景细节繁而不乱、透视准确；整体是欧洲精装漫画的内页质感；保持主体五官特征与姿态不变`
+- **推荐 input_fidelity**：0.5
+- **适合**：人像、场景、科幻题材
+- **避免**：**不要美漫的粗黑墨块与厚排线（那是 #24）**、不要日漫的大眼萌化（那是 #22）、不要写实厚涂、不要浓艳高饱和
+
+### 76. 矢量扁平插画（Flat Vector Illustration）
+- **关键词**：flat vector illustration, geometric shapes, solid fill, minimal outline, editorial illustration, limited palette
+- **术语锚点**：**flat design（扁平设计）**｜solid fill（纯色填充）｜geometric simplification（几何简化）｜limited palette（有限调色板）
+- **参照物**：当代品牌插画与报纸观点插画（如报纸 op-ed 配图一类）
+- **提示词模板**：`矢量扁平插画（flat vector illustration）风格，形体被简化为几何形状的拼合（圆、矩形、椭圆、三角），纯色填充、没有渐变、没有噪点、没有体积光影；轮廓可选极细的深色描边或完全无线；色彩为有限而考究的调色板（如暖橙、砖红、靛蓝、灰绿、米白），色块之间以小空隙留出呼吸；画面概念化、秩序清晰，带编辑插画般的说明性；保持主体的辨识特征与姿态可辨`
+- **推荐 input_fidelity**：0.45
+- **适合**：人像、场景、概念图、编辑配图
+- **避免**：不要渐变与阴影、不要手绘笔触、不要立体写实、不要过多细节
+
+### 77. 单线画（Single Line Art）
+- **关键词**：single line drawing, continuous line, one-line art, minimal, white ground, confident gesture
+- **术语锚点**：**continuous line（连续不断的线）**｜one-line art（单线画）｜minimal contour（极简轮廓）｜negative space（留白）
+- **参照物**：毕加索的单线动物与人体；马蒂斯的线条；当代极简单线插画
+- **提示词模板**：`单线画（single line art）风格，整幅只由一条连续不断、不自交的线构成，从起笔到收笔一气呵成，粗细可有极轻微的变化，线条自信流畅；其余全部为空白（negative space），没有任何填充、阴影或第二笔；画面极简、现代、有设计感，线条在恰好的地方转折以交代发型、五官、姿态与衣褶；保持主体的辨识特征与姿态可辨`
+- **推荐 input_fidelity**：0.4
+- **适合**：人像、动物、极简设计
+- **避免**：不要多笔、不要填充与阴影、不要抖动的细碎线（必须自信流畅）、不要背景元素
+
+### 78. 低多边形（Low Poly）
+- **关键词**：low poly, faceted triangles, polygon mesh, flat shading, geometric facets, low-poly render
+- **术语锚点**：**low poly（低多边形）**｜polygon mesh（多边形网格）｜**flat shading（平直着色）**｜faceted surface（切面）
+- **参照物**：早期 3D 游戏的低模造型；当代低多边形艺术海报
+- **提示词模板**：`低多边形（low poly）艺术风格，主体的表面被分解为一块块清晰的三角形／多边形切面（faceted surface），每个切面为单一纯色、相邻切面之间靠明度差形成体积（flat shading），没有平滑过渡与抗锯齿；色彩为清新的有限调色板，背景可作同样的多边形化或干净的纯色渐变；整体是低模 3D 的几何秩序感；保持主体轮廓、五官位置与姿态可辨`
+- **推荐 input_fidelity**：0.45
+- **适合**：人像、动物、风景、产品
+- **避免**：不要平滑曲面、不要圆润的过渡、不要写实皮肤纹理、不要过多小面导致糊成一团
+
+### 79. 体素（Voxel Art）
+- **关键词**：voxel art, cube-based, MagicaVoxel, isometric, blocky 3D, limited palette, diorama
+- **术语锚点**：**voxel（体素）**｜**isometric（等距）**｜blocky geometry（方块化形体）｜limited palette（有限调色板）
+- **参照物**：MagicaVoxel 风格的体素场景；方块式建筑与体素微缩立体模型
+- **提示词模板**：`体素（voxel art）风格，整个世界由大小一致的立方体（voxel）堆叠而成，形体棱角分明、彻底方块化，可见清晰的格子与阶梯状边缘；采用等距（isometric）视角，光源多为单一平行光，每个立方体的顶面、正面与侧面呈现三个固定的明度层级；色彩为明亮饱和的有限调色板，背景为干净的纯色或同风格的小场景；保持主体轮廓、姿态与关键特征可辨`
+- **推荐 input_fidelity**：0.4
+- **适合**：人物、场景、物品、建筑
+- **避免**：不要平滑曲面、不要真实光影与镜面反射、不要写实材质贴图
+
+### 80. 稚拙蜡笔画（Naïve Crayon / Oil Pastel）
+- **关键词**：naïve art, crayon, oil pastel, childlike, waxy texture, wobbly line, paper tooth, warm palette
+- **术语锚点**：**naïve art（稚拙艺术）**｜**oil pastel（油画棒）**｜waxy bloom（蜡质白霜）｜paper tooth（纸面颗粒）｜wobbly line（歪斜的手绘线）
+- **参照物**：儿童画的造型语法；让·杜布菲（Art Brut）；当代手绘绘本
+- **提示词模板**：`稚拙手绘风格，用蜡笔或油画棒（oil pastel）在粗糙的纸上画出：笔触粗大、颜色厚重并露出纸张颗粒（paper tooth），用力处出现蜡质白霜与堆叠的反光，线条歪斜而不准（wobbly line），形体比例故意不准确、透视错误；配色为温暖明快的红黄绿蓝，色块可略微出界；整体是儿童画般天真直接、充满手工感的气息；保持主体可辨识的关键特征（发型、服装、姿态）`
+- **推荐 input_fidelity**：0.4
+- **适合**：人物、动物、场景、亲子题材
+- **避免**：不要精致的写实、不要干净的数字线条、不要立体光影、不要刻意做旧
+
+---
+
+## 十五、风格推导公式（用于未收录的风格）
 
 当用户要的风格不在上表时，按以下公式现场构造提示词，并在生成后把新条目追加到本文件：
 
@@ -557,7 +867,7 @@
 
 ---
 
-## 十二、术语校准来源（GitHub 开放提示词资源）
+## 十六、术语校准来源（GitHub 开放提示词资源）
 
 v2 的术语与参照物来自以下公开资源（MIT/公开许可的提示词整理项目），仅用于术语校准，未复制其代码：
 
@@ -581,3 +891,8 @@ v2 的术语与参照物来自以下公开资源（MIT/公开许可的提示词�
 - **摄影/胶片**：negative space（留白）、high-key / low-key、anamorphic（变形宽银幕）、shallow DOF（浅景深）、film grain（胶片颗粒）、silver gelatin（银盐）、teal & orange（青橙调）、soft focus（柔焦）
 - **流派锚点**：Expressionism（表现主义）、Fauvism（野兽派）、Impressionism（印象派）、Art Nouveau（新艺术）、Art Deco（装饰艺术）、Bauhaus（包豪斯）、Suprematism（至上主义）、Pop Art（波普）、Op Art（欧普）、Surrealism（超现实）、Cyberpunk（赛博朋克）、Vaporwave（蒸汽波）、Solarpunk、Steampunk（蒸汽朋克）、Retrofuturism（复古未来主义）
 - **v4 新增术语（38–50）**：gilded geometry（镀金几何）、whiplash curve（鞭形曲线）、photomontage（摄影拼贴）、spot ink／overprint／misregistration（专色／叠印／套印偏移）、relief print／gouge mark（凸版／凿痕）、intaglio／guilloche（凹版／扭索饰纹）、divisionism／optical mixing（分色主义／视觉混合）、impossible juxtaposition／uncanny scale（不可能并置／异常比例）、moiré／optical vibration（摩尔纹／视觉振动）、buon fresco／craquelure（湿壁画／龟裂）、leaded glass／grisaille（铅条镶嵌玻璃／灰色单彩玻璃）、satin stitch／counted thread（缎面绣／数纱绣）、Carrara marble／drapery fold（卡拉拉大理石／衣褶）
+- **v5 新增术语（51–80）**：
+  - **东亚传统**：gongbi（工笔）、iron-wire line／silkworm-thread line（铁线描／游丝描）、qinglu shanshui（青绿山水）、gold outline（泥金勾线）、mineral pigment（矿物颜料）、oxidised flesh（变色发黑的肤色）、flying apsara（飞天）、underglaze cobalt（釉下钴蓝）、crackle（开片冰裂）、gold line（金线勾勒）、brocade mount（锦缎装裱）、ink rubbing（拓本）
+  - **西方艺术史**：tessera／gold ground／hieratic frontal（马赛克小块／金底／圣像正面程式）、illuminated manuscript／vellum／gold leaf／marginalia（泥金手抄本／羊皮纸／金箔／页边装饰）、north light／ultramarine（北向窗光／群青）、tenebrism（暗色调主义）、fête galante／rocaille（雅宴画／贝壳涡卷）、analytic cubism／simultaneous viewpoint（分析立体主义／多视点并置）、action painting／drip／all-over composition（行动绘画／滴洒法／满幅构图）、gold leaf ground（金箔金底）
+  - **摄影影像**：wet plate collodion／tintype／ambrotype（湿版火棉胶／锡版／玻璃版）、uneven collodion pour（药液流痕）、cyanotype／Prussian blue（蓝晒／普鲁士蓝）、photogram（物影照片）、reversal film（反转片）、long exposure／light trail／silky water（长曝光／光轨／丝绢水流）、double exposure／silhouette fill（双重曝光／剪影填充）、tilt-shift／miniature effect（移轴／微缩效果）、glitch／pixel sorting／RGB split／datamosh（故障／像素排序／通道分离／数据压制）、CRT scanline／phosphor glow／tracking error（扫描线／荧光粉辉光／磁迹错位）
+  - **当代插画数字**：Superflat（超扁平）、bande dessinée／ligne claire（法比漫画／清晰线条）、flat vector／solid fill（矢量扁平／纯色填充）、continuous line／one-line art（连续线／单线画）、low poly／polygon mesh／flat shading（低多边形／多边形网格／平直着色）、voxel／isometric（体素／等距）、naïve art／oil pastel／paper tooth（稚拙艺术／油画棒／纸面颗粒）

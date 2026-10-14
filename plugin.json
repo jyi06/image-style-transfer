@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "image-style-transfer",
-  "version": "1.1.0",
-  "description": "Restyle any image into one of 50 curated art styles. Ships a production-tested prompt library, per-style strength recommendations, and local-patch retouching recipes that fix one detail without re-rendering the whole image. Generator-agnostic: works with any image model your agent can reach.",
+  "version": "1.2.0",
+  "description": "Restyle any image into one of 80 curated art styles. Ships a production-tested prompt library, per-style strength recommendations, and local-patch retouching recipes that fix one detail without re-rendering the whole image. Generator-agnostic: works with any image model your agent can reach.",
   "author": {
     "name": "can1123",
     "url": "https://github.com/jyi06"
@@ -24,8 +24,8 @@
     "com.openai": {
       "interface": {
         "displayName": "Image Style Transfer",
-        "shortDescription": "50 art styles for any image",
-        "longDescription": "Turn a photo into Chinese ink wash, oil painting, ukiyo-e, cyberpunk, anime, film noir, an editorial magazine spread, Art Deco, Risograph, stained glass and 40 more styles. Includes a battle-tested prompt library, a strength-tuning playbook mapped to any provider's parameter, and local-patch retouching recipes for repairing a single detail without drifting the rest of the image.",
+        "shortDescription": "80 art styles for any image",
+        "longDescription": "Turn a photo into Chinese ink wash, oil painting, ukiyo-e, gongbi, a Dunhuang mural, Vermeer interior light, Baroque, pointillism, stained glass, cyanotype, Kodachrome, long exposure, glitch art, Superflat, ligne claire, voxel art, cyberpunk, anime, film noir, an editorial magazine spread, Art Deco, Risograph and 60 more styles. Includes a battle-tested prompt library, a strength-tuning playbook mapped to any provider's parameter, and local-patch retouching recipes for repairing a single detail without drifting the rest of the image.",
         "developerName": "can1123",
         "category": "Creativity",
         "capabilities": ["Read", "Write"],

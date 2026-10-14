@@ -1,6 +1,6 @@
 # Image Style Transfer
 
-> Turn any image into one of **50 curated art styles** — Chinese ink wash, oil painting, ukiyo-e, cyberpunk, Studio Ghibli, film noir, editorial magazine spreads, Art Deco, Risograph, stained glass and 40 more.
+> Turn any image into one of **80 curated art styles** — Chinese ink wash, oil painting, ukiyo-e, gongbi, a Dunhuang mural, Vermeer interior light, Baroque, pointillism, stained glass, cyanotype, Kodachrome, long exposure, glitch art, Superflat, ligne claire, voxel art, cyberpunk, Studio Ghibli, film noir, editorial magazine spreads, Art Deco, Risograph and 60 more.
 
 [中文说明 →](README.zh-CN.md)
 
@@ -12,7 +12,7 @@ Built on the open **Agent Skills** standard, so the same skill runs in **Codex, 
 
 ## Gallery
 
-One input image, seven of the 50 styles. Every result below came from a single prompt-template entry in the library — no per-image hand-tuning.
+One input image, seven of the 80 styles. Every result below came from a single prompt-template entry in the library — no per-image hand-tuning.
 
 ![Original on the left, #26 JOJO on the right](docs/gallery/before-after.png)
 
@@ -41,7 +41,7 @@ Most style-transfer prompts are a one-line "make it look like an oil painting". 
 
 Beyond the library, the skill carries a **retouching playbook** for the part everyone gets stuck on: the render is 95% right, one detail is wrong, and re-running the whole image wrecks everything else. The fix — crop a patch, repaint the patch, feather it back so the rest stays pixel-identical — is documented with measured before/after numbers.
 
-## The 50 styles
+## The 80 styles
 
 | # | Category | Styles |
 |---|----------|--------|
@@ -55,6 +55,10 @@ Beyond the library, the skill carries a **retouching playbook** for the part eve
 | 38–43 | Print & ornamental art | Art Deco, Art Nouveau, Bauhaus poster, Risograph, woodcut, banknote engraving |
 | 44–48 | Art movements & concepts | pointillism, surrealism, Op Art, fresco, stained glass |
 | 49–50 | Material & craft | embroidery, marble sculpture |
+| 51–57 | East Asian traditions | gongbi, blue-green landscape, baimiao outline, Dunhuang mural, blue-and-white porcelain, thangka, stele rubbing |
+| 58–65 | Western art history | Byzantine mosaic, illuminated manuscript, Vermeer interior light, Baroque, Rococo, Cubism, action painting, Klimt gold leaf |
+| 66–73 | Photography & imaging | wet plate collodion, cyanotype, Kodachrome, long exposure, double exposure, tilt-shift miniature, glitch art, analog video / CRT |
+| 74–80 | Contemporary illustration & digital | Superflat, bande dessinée / ligne claire, flat vector, single line art, low poly, voxel, naïve crayon |
 
 Full prompts and parameters: [`skills/image-style-transfer/references/style-library.md`](skills/image-style-transfer/references/style-library.md).
 
@@ -160,7 +164,7 @@ image-style-transfer/
         ├── SKILL.md                         # the workflow
         ├── agents/openai.yaml               # Codex-side metadata and dependencies
         ├── references/
-        │   ├── style-library.md             # the 50 prompt templates
+        │   ├── style-library.md             # the 80 prompt templates
         │   └── style-menu.md                # the selection menu + smart recommendations
         └── scripts/
             └── generate.py                  # optional zero-dependency image-to-image helper
