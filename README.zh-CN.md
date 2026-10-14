@@ -4,6 +4,8 @@
 
 [English →](README.md)
 
+**仓库镜像：** [GitHub](https://github.com/jyi06/image-style-transfer) · [Gitee](https://gitee.com/jyi106/image-style-transfer) —— 国内建议用 Gitee 镜像，克隆更快，下面的示例图也能正常打开。
+
 基于开放的 **Agent Skills** 标准构建，同一份 skill 可直接运行在 **Codex、ChatGPT、Claude Code、Cursor、GitHub Copilot、Gemini CLI、VS Code** 等任何能读取 `SKILL.md` 的宿主里。
 
 ---
@@ -65,7 +67,10 @@
 Codex 会扫描 `.agents/skills`（仓库级，一路向上到仓库根）和 `~/.agents/skills`（用户级）。
 
 ```bash
+# GitHub
 git clone https://github.com/jyi06/image-style-transfer.git
+# 国内建议改用 Gitee 镜像（把上面一行注释掉，启用下面这行）
+# git clone https://gitee.com/jyi106/image-style-transfer.git
 cd image-style-transfer
 
 # 用户级安装（所有仓库可用）

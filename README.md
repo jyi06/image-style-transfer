@@ -4,6 +4,8 @@
 
 [中文说明 →](README.zh-CN.md)
 
+**Mirrors:** [GitHub](https://github.com/jyi06/image-style-transfer) · [Gitee](https://gitee.com/jyi106/image-style-transfer) — in mainland China use the Gitee mirror: faster clones, and the image links below actually resolve.
+
 Built on the open **Agent Skills** standard, so the same skill runs in **Codex, ChatGPT, Claude Code, Cursor, GitHub Copilot, Gemini CLI, VS Code** — any host that reads `SKILL.md`.
 
 ---
@@ -65,7 +67,10 @@ Full prompts and parameters: [`skills/image-style-transfer/references/style-libr
 Codex discovers skills in `.agents/skills` (repo-level, walking up to the repo root) and `~/.agents/skills` (user-level).
 
 ```bash
+# GitHub
 git clone https://github.com/jyi06/image-style-transfer.git
+# Gitee mirror — uncomment this instead if you are in mainland China
+# git clone https://gitee.com/jyi106/image-style-transfer.git
 cd image-style-transfer
 
 # user-level install (available in every repo)
