@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Six portrait and handmade-media styles (81–86): Sargent-inspired portrait, soft pastel, hand-colored silver gelatin, blue ballpoint sketch, charcoal smudge portrait, and duotone screenprint portrait. Existing numbers 1–80 are unchanged.
+- Synchronized catalog totals, menus, recommendations, and metadata to 86 styles. Styles 81 and 85 have generated examples; the other four await generation validation. Numeric fidelity values are starting suggestions rather than measured tool settings.
+
 ### Fixed
 
 - The install notes claimed flatly that Codex never reads `~/.codex/skills/`.
